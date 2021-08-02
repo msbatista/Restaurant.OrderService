@@ -10,5 +10,7 @@ namespace Restaurant.OrderService.Infrastructure.DataAccess.Repository
         {
             _context = context;
         }
+
+        public IUnitOfWork UnitOfWork { get => _context; }
     }
 }

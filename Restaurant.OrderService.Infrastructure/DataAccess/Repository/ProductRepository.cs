@@ -1,6 +1,6 @@
 ﻿using Restaurant.OrderService.Domain;
-using Restaurant.OrderService.Domain.Interfaces.Repositories;
 using Restaurant.OrderService.Infrastructure.DataAccess.Context;
+using Restaurant.OrderService.Infrastructure.DataAccess.Repository.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -12,7 +12,7 @@ namespace Restaurant.OrderService.Infrastructure.DataAccess.Repository
         {
         }
 
-        public async Task<int> InsertProducts(IEnumerable<Product> products)
+        public async Task<int> InsertMany(IEnumerable<Product> products)
         {
             foreach (var product in products)
             {

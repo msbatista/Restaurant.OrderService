@@ -1,6 +1,6 @@
 ﻿using Restaurant.OrderService.Domain;
-using Restaurant.OrderService.Domain.Interfaces.Repositories;
-using Restaurant.OrderService.Domain.Interfaces.Services;
+using Restaurant.OrderService.Infrastructure.DataAccess.Repository.Interfaces;
+using Restaurant.OrederService.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -17,7 +17,7 @@ namespace Restaurant.OrederService.Services
 
         public async Task<int> InsertProducts(IEnumerable<Product> products)
         {
-            return await _productRepository.InsertProducts(products);
+            return await _productRepository.InsertMany(products);
         }
     }
 }

@@ -17,6 +17,8 @@ namespace Restaurant.OrderService.Infrastructure.DataAccess.EntityFrameworkConfi
             builder.Property(account => account.CreationDate).ValueGeneratedOnAdd().HasDefaultValueSql("GETDATE()");
 
             builder.HasMany(account => account.Orders).WithOne().HasForeignKey("AccountId");
+
+            builder.Ignore(account => account.AccountDebit);
         }
     }
 }

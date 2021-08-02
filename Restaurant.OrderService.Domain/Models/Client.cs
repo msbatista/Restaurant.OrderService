@@ -1,8 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using Restaurant.OrderService.Domain.Interfaces;
+using System.Collections.Generic;
 
 namespace Restaurant.OrderService.Domain
 {
-    public class Client
+    public class Client : IAggrateRoot
     {
         public long Id { get; set; }
         public long Cpf { get; set; }

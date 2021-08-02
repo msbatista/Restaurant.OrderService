@@ -1,7 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Restaurant.OrderService.Domain;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Restaurant.OrderService.Domain.Interfaces.Services
+namespace Restaurant.OrederService.Services.Interfaces
 {
     public interface IProductService
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Restaurant.OrderService.Domain;
-using Restaurant.OrderService.Domain.Interfaces.Services;
+using Restaurant.OrederService.Services.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

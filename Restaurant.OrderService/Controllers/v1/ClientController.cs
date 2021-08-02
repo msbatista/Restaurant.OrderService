@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Restaurant.OrderService.Domain;
-using Restaurant.OrderService.Domain.Interfaces.Repositories;
+using Restaurant.OrderService.Infrastructure.DataAccess.Repository.Interfaces;
 using System.Threading.Tasks;
 
 namespace Restaurant.OrderService.Controllers.v1

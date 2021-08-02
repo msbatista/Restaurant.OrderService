@@ -20,6 +20,8 @@ namespace Restaurant.OrderService.Infrastructure.DataAccess.EntityFrameworkConfi
             builder.Property(order => order.IsQuit).IsRequired().HasColumnType("BIT");
 
             builder.HasMany(order => order.Products).WithOne().IsRequired();
+
+            builder.Ignore(order => order.TotalOrder);
         }
     }
 }

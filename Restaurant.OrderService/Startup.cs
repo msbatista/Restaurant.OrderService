@@ -5,7 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Restaurant.OrderService.Domain.Interfaces.Repositories;
 using Restaurant.OrderService.Infrastructure.DataAccess.Context;
 using Restaurant.OrderService.Infrastructure.DataAccess.Repository;
 using Restaurant.OrderService.Infrastructure.Middleware.Filters;

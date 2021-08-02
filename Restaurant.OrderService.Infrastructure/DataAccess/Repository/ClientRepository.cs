@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Restaurant.OrderService.Domain;
-using Restaurant.OrderService.Domain.Interfaces.Repositories;
 using Restaurant.OrderService.Infrastructure.DataAccess.Context;
+using Restaurant.OrderService.Infrastructure.DataAccess.Repository.Interfaces;
 using System.Threading.Tasks;
 
 namespace Restaurant.OrderService.Infrastructure.DataAccess.Repository
@@ -12,15 +12,22 @@ namespace Restaurant.OrderService.Infrastructure.DataAccess.Repository
         {
         }
 
+        public async Task DeleteAccount(long cpf)
+        {
+            var client = await GetClientByCpf(cpf);
+
+            _context.Clients.Remove(client);
+        }
+
         public async Task<Client> GetClientByCpf(long cpf)
         {
             return await _context.Clients.FirstOrDefaultAsync(client => client.Cpf == cpf);
         }
 
-        public async Task Insert(Client client)
+        public async Task<int> Insert(Client client)
         {
             await _context.Clients.AddAsync(client);
-            await _context.SaveChangesAsync();
+            return await _context.SaveChangesAsync();
         }
     }
 }
